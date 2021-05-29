@@ -171,36 +171,18 @@ TEST(Strassen_algorithm, TEST7) {
 
 
     for (int i = 0; i < static_cast<int>(a.size()); i++)
-        a[i] = getRandomNumber(0, 11);
+        a[i] = getRandomNumber(-50, 81);
 
     for (int i = 0; i < static_cast<int>(b.size()); i++)
-        b[i] = getRandomNumber(-15, 10);
+        b[i] = getRandomNumber(-2, 321);
 
     std::vector<double> c_strass(rows_num * rows_num);
     std::vector<double> c_default(rows_num * rows_num);
     std::vector<double>::iterator c_it = c_default.begin();
 
-    // auto t1 = tbb::tick_count::now();
-    c_strass = StrassenMultiOMP(a, b);
-    // auto t2 = tbb::tick_count::now();
-    // auto t1_t2_diff = (t2 - t1).seconds();
-
-    // std::cout << t1_t2_diff << std::endl;
-
-    for (int i = 0; i < static_cast<int>(c_strass.size()); i++) {
-        ASSERT_LT(abs(c_strass[i] - c_default[i]), EPS);
-    }
-
-    // t1 = omp_get_wtime();
     c_strass = StrassenMulti(a, b);
-    // t2 = omp_get_wtime();
 
-    // t1 = tbb::tick_count::now();
-    c_strass = StrassenMultiTBB(a, b);
-    // t2 = tbb::tick_count::now();
-    // t1_t2_diff = (t2 - t1).seconds();
-
-    // std::cout << t1_t2_diff << std::endl;
+    matrMulti(a, b, c_it, rows_num);
 
     for (int i = 0; i < static_cast<int>(c_strass.size()); i++) {
         ASSERT_LT(abs(c_strass[i] - c_default[i]), EPS);
