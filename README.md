@@ -2,13 +2,13 @@
 [![deepcode](https://www.deepcode.ai/api/gh/badge?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybTEiOiJnaCIsIm93bmVyMSI6ImFsbG5lcyIsInJlcG8xIjoicHBfMjAyMV9zcHJpbmdfaW5mb3JtYXRpY3MiLCJpbmNsdWRlTGludCI6ZmFsc2UsImF1dGhvcklkIjoyNDg0MiwiaWF0IjoxNjE1MjY1NTEwfQ.P2Fo7opfpxSGBAHUmvWxGVa73E6SaPnOJuu4UBU03Hk)](https://www.deepcode.ai/app/gh/allnes/pp_2021_spring_informatics/_/dashboard?utm_content=gh%2Fallnes%2Fpp_2021_spring_informatics)
 
 # Parallel Programming Course
-test_changes3
+test_changes
 The following parallel programming technologies are considered in practice:
   * `MPI`
   * `OpenMP`
   * `TBB`
   * `std::thread`
-
+test_changes3
 ## Rules for submissions
 1. You are not supposed to trigger CI jobs by frequent updates of your pull request. First you should test you work locally with all the scripts (code style)
     * Respect others time and don't slow down the job queue
