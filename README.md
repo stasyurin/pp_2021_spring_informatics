@@ -7,6 +7,7 @@ test_branch211
 test_branch212
 test_branch213
 test_branch221
+test_branch222
 
 # Parallel Programming Course
 test_changes2
