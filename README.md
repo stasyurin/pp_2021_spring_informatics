@@ -22,7 +22,7 @@ git submodule update --init --recursive
 
 ### Static analysis of project
   * **Windows (MSVC)**:
-  
+  test_changes2
   Unsupported operating system!
   
   * **Linux (`gcc` and `clang`)**:
